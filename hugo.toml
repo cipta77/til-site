@@ -1,0 +1,56 @@
+baseURL = "https://example.com/"
+locale = "en-us"
+title = "fikriw"
+
+[params]
+  nickname = "fikriw"
+  fullname = "Cipta Fikri Wiratama"
+  tagline = "Caffeine-powered Software Engineer building code into stories"
+  description = "Personal site, blog, and TIL log of Cipta Fikri Wiratama."
+  author = "Cipta Fikri Wiratama"
+  email = "ciptasmu77@gmail.com"
+  github = "https://github.com/fikriww"
+  linkedin = "https://linkedin.com/in/cipta-wiratama"
+  website = "https://ciptasm.com/fikriww"
+  location = "Semarang, Indonesia"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Achievements"
+    url = "/achievements/"
+    weight = 2
+  [[menu.main]]
+    name = "Certificates"
+    url = "/certificates/"
+    weight = 3
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 4
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 5
+  [[menu.main]]
+    name = "TIL"
+    url = "/posts/"
+    weight = 6
+  [[menu.main]]
+    name = "Reach me!"
+    url = "/contact/"
+    weight = 7
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

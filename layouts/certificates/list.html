@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1>Certificates</h1>
+<ul class="card-list">
+  {{ range hugo.Data.certificates }}
+  <li class="card">
+    <div class="card-title">{{ .title }}</div>
+    <div class="card-meta">{{ .issuer }}{{ if .date }} · {{ .date }}{{ end }}</div>
+    {{ if .note }}<div class="card-note">{{ .note }}</div>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

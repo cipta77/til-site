@@ -1,0 +1,28 @@
+- title: "WIRA — Semarang Business Intelligence Platform"
+  role: "Lead AI Engineer, DBS Coding Camp 2026 (MBKM)"
+  description: "Multi-output deep learning model (TensorFlow Functional API & subclassing, custom WeightedHorizonMAELoss) predicting commercial viability across 12 business categories (≥85% accuracy, MAE < 0.02). Deployed as a containerized FastAPI inference service."
+  tags: ["AI/ML", "TensorFlow", "FastAPI", "Docker"]
+- title: "Bitcoin Price Forecasting"
+  role: "Independent Project"
+  description: "LSTM & Seq2Seq time-series model on 52,000+ hourly Bitcoin records with ACF/PACF sliding windows and a custom BestSeq2SeqLSTM subclass (test MAE < 0.015)."
+  tags: ["Deep Learning", "Time Series", "TensorFlow"]
+- title: "NLP Sentiment Analysis Pipeline"
+  role: "Independent Project"
+  description: "Multi-class sentiment classifier on Mobile Legends reviews using SMOTE class balancing and a Bidirectional LSTM network, achieving ≥85% test accuracy."
+  tags: ["NLP", "Deep Learning"]
+- title: "Medical Image Classification"
+  role: "Independent Project"
+  description: "Pneumonia classifier on 5,856 chest X-ray images using custom CNNs and fine-tuned DenseNet121 transfer learning with data augmentation."
+  tags: ["Computer Vision", "Transfer Learning"]
+- title: "Distributed & Parallel Computing Benchmark"
+  role: "Project Lead"
+  description: "Benchmarked execution runtime and parallel speedup comparing Serial, MPI-1, and CUDA GPU architectures on 60-country statistical datasets."
+  tags: ["MPI", "CUDA", "Distributed Systems"]
+- title: "PojokKampus — Campus Marketplace Web Platform"
+  role: "Full-Stack Developer, Software Engineering Course (PPL/RPL)"
+  description: "Multi-role (Admin/Seller/Buyer) campus e-commerce platform on Laravel 12 & MySQL with seller KTP verification, RBAC, DomPDF invoice/report generation, and Chart.js analytics."
+  tags: ["Laravel", "MySQL", "Full-Stack"]
+- title: "IslamMy — Islamic Companion Mobile App"
+  role: "Initiator & Integrator, Team Project"
+  description: "6-platform Flutter companion app built in a 1-hour team sprint with real-time GPS prayer calculation, device-sensor Qibla compass, and a digital Tasbih counter."
+  tags: ["Flutter", "Dart"]

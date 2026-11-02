@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container navbar__brand">
+    <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Params.nickname }}</a>
+  </div>
+  <nav class="container navbar__menu">
+    <ul class="site-nav">
+      {{ $currentPath := .RelPermalink }}
+      {{ range .Site.Menus.main }}
+        {{ $itemPath := .URL | relURL }}
+        <li><a href="{{ $itemPath }}" class="{{ if eq $currentPath $itemPath }}is-active{{ end }}">{{ .Name }}</a></li>
+      {{ end }}
+      <li><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">&#9680;</button></li>
+    </ul>
+  </nav>
+</header>

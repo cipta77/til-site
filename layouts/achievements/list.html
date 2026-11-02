@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>Achievements</h1>
+<ul class="card-list">
+  {{ range hugo.Data.achievements }}
+  <li class="card">
+    <div class="card-title">{{ .title }}</div>
+    <div class="card-meta">{{ .subtitle }}{{ if .date }} · {{ .date }}{{ end }}</div>
+    {{ if .description }}<p class="card-desc">{{ .description }}</p>{{ end }}
+    {{ if .highlight }}<div class="card-note">{{ .highlight }}</div>{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
