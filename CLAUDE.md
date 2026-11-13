@@ -12,24 +12,25 @@ built with Hugo. Live at https://fikriw.fun/.
   Hostinger), not at Vercel.
 - **No server / SSH / IP to manage** — it's a static site. Access = being
   logged in to the Vercel CLI (`vercel whoami`).
-- **Git:** `origin` = https://github.com/cipta77/til-site.git. Git is NOT
-  connected to Vercel — pushing does not deploy.
+- **Git:** `origin` = https://github.com/cipta77/til-site.git.
 - **Secrets:** `.env.local` only holds a short-lived `VERCEL_OIDC_TOKEN`
   written by the Vercel CLI. Gitignored; never commit or print it.
 - **Analytics:** none installed yet.
 
 ## Deploying
 
-Vercel framework preset is "Other" with no build step; it serves the
-locally built `public/` folder. Always build first:
+`vercel.json` sets framework `hugo`, build `hugo --minify`, output `public`,
+and pins `HUGO_VERSION` (0.169.0) — Vercel builds the site itself.
 
 ```bash
-hugo --minify      # builds into public/
 vercel --prod      # deploy to production (omit --prod for a preview URL)
 ```
 
-`vercel.json` pins `HUGO_VERSION` (0.169.0). On a new machine:
-`vercel login` then `vercel link` (pick `til-site`).
+GitHub → Vercel auto-deploy is NOT connected yet (`vercel git connect`
+failed: the Vercel account lacks access to cipta77/til-site). Until it is,
+pushing does not deploy. Pushing to GitHub requires the `cipta77` gh account
+(`gh auth switch -u cipta77`); switch back to `reon01425-glitch` afterwards.
+On a new machine: `vercel login` then `vercel link` (pick `til-site`).
 
 ## Adding content
 
