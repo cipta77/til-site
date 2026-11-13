@@ -47,9 +47,10 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  font-size: 18px;
   color: var(--fg);
   background-color: var(--bg);
-  line-height: 1.6;
+  line-height: 1.75;
   position: relative;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
@@ -74,30 +75,30 @@ body::before {
 .container {
   max-width: 760px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .site-header {
   border-bottom: 1px solid var(--border);
-  padding: 16px 0;
+  padding: 28px 0 20px;
   text-align: center;
 }
 
 .navbar__brand {
-  padding-bottom: 8px;
+  padding-bottom: 20px;
 }
 
 .site-title {
   font-family: "Tw Cent MT", "Century Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: var(--fg);
   text-decoration: none;
 }
 
 .navbar__menu {
-  padding-top: 4px;
+  padding-top: 0;
 }
 
 .site-nav {
@@ -108,7 +109,7 @@ body::before {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px;
+  gap: 32px;
 }
 
 .site-nav li { display: flex; align-items: center; }
@@ -116,8 +117,8 @@ body::before {
 .site-nav a {
   color: var(--fg);
   text-decoration: none;
-  font-size: 1rem;
-  padding-bottom: 4px;
+  font-size: 1.05rem;
+  padding-bottom: 6px;
   border-bottom: 2px solid transparent;
 }
 
@@ -132,8 +133,8 @@ body::before {
   border: 1px solid var(--border);
   color: var(--fg);
   border-radius: 6px;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   cursor: pointer;
   font-size: 1rem;
   line-height: 1;
@@ -142,19 +143,20 @@ body::before {
 #theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
 main.container {
-  padding: 40px 20px 60px;
+  padding: 64px 24px 80px;
   min-height: 60vh;
 }
 
 .page--home h1 {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 800;
   margin-bottom: 0;
+  letter-spacing: -0.01em;
 }
 
 .page--home .post-content {
-  margin-top: 32px;
+  margin-top: 44px;
 }
 
 .post-list {
@@ -164,7 +166,7 @@ main.container {
 }
 
 .post-item {
-  padding: 12px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: baseline;
@@ -202,27 +204,37 @@ main.container {
 
 .tag:hover { color: var(--accent); }
 
-.post h1, .page h1 { margin-bottom: 4px; }
+.post h1, .page h1 { margin-bottom: 6px; }
 .post-meta { color: var(--muted); font-size: 0.9rem; margin-top: 0; }
-.post-content { margin-top: 24px; }
+.post-content { margin-top: 28px; }
+.post-content p { margin: 0 0 28px; }
+.post-content p:last-child { margin-bottom: 0; }
 .post-content pre {
   background: var(--code-bg);
-  padding: 12px;
-  border-radius: 6px;
+  padding: 14px 16px;
+  border-radius: 8px;
   overflow-x: auto;
 }
 .post-content code {
   background: var(--code-bg);
-  padding: 2px 5px;
+  padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
 }
 .post-content pre code { background: none; padding: 0; }
 .post-content a { color: var(--fg); text-decoration: underline; }
+.post-content hr {
+  width: 120px;
+  margin: 40px auto;
+  border: none;
+  border-top: 1px solid var(--border);
+}
 
 .tag-list { list-style: none; padding: 0; }
 .tag-list li { padding: 6px 0; }
 .tag-count { color: var(--muted); font-size: 0.85rem; }
+
+main.container h1 { margin-bottom: 32px; font-size: 1.9rem; }
 
 .card-list {
   list-style: none;
@@ -230,25 +242,26 @@ main.container {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .card {
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 18px;
+  border-radius: 12px;
+  padding: 20px 22px;
 }
 
-.card-title { font-weight: 600; }
-.card-meta { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
-.card-note { color: var(--muted); font-size: 0.8rem; margin-top: 6px; }
-.card-desc { margin: 10px 0 0; }
-.card-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.card-title { font-weight: 600; font-size: 1.05rem; }
+.card-meta { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+.card-note { color: var(--muted); font-size: 0.8rem; margin-top: 8px; }
+.card-desc { margin: 12px 0 0; }
+.card-tags { margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap; }
 .card-tags .tag { margin-left: 0; }
 
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: 20px 0;
+  padding: 28px 0;
   color: var(--muted);
   font-size: 0.85rem;
+  text-align: center;
 }

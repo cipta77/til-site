@@ -22,7 +22,15 @@ badges and a few other certifications — you can see those on the
 [achievements](/achievements/), and what I've shipped on the
 [projects](/projects/) page.
 
-Outside of programming, I enjoy reading — there's a particular kind of
-excitement in picking up knowledge that has nothing to do with code.
+Outside of programming, I enjoy reading scientific health stuff backed up
+with papers, comics (I recently read Kurumi Forex Fighter, Blue Lock,
+Shangri-La Frontier), rewatch Haikyuu Season 2 every time I eat, and
+watch seasonal anime occasionally like JoJo's Bizarre Adventure: Steel
+Ball Run — there's a particular kind of excitement in picking up
+knowledge that has nothing to do with code.
 
-Want to get in touch? [Reach me here](/contact/).
+---
+
+Fun fact: I built this blog using Hugo — which, in English, means
+"thinker" — and my name, Fikri, comes from the Arabic word *fikr*,
+meaning roughly the same thing xd.

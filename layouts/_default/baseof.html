@@ -9,8 +9,18 @@
   <link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | relURL }}" title="{{ .Site.Title }}">
   <script>
     (function () {
-      var saved = localStorage.getItem("theme");
-      if (saved) document.documentElement.setAttribute("data-theme", saved);
+      function applyTheme() {
+        var saved = localStorage.getItem("theme");
+        if (saved) {
+          document.documentElement.setAttribute("data-theme", saved);
+        } else {
+          document.documentElement.removeAttribute("data-theme");
+        }
+      }
+      applyTheme();
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted) applyTheme();
+      });
     })();
   </script>
 </head>
